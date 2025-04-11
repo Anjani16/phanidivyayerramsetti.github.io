@@ -1,155 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Product Design Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Roboto', sans-serif;
     }
 
     body {
-      background-image: url('https://images.unsplash.com/photo-1549924231-f129b911e442');
-      background-size: cover;
-      background-attachment: fixed;
-      color: #fff;
+      font-family: Arial, sans-serif;
+      background: url('https://images.unsplash.com/photo-1522199710521-72d69614c702?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+      color: #333;
     }
 
     header {
-      background: rgba(0, 0, 0, 0.7);
+      background-color: rgba(255, 255, 255, 0.9);
       padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    header h1 {
-      font-size: 2rem;
+    nav {
+      margin-top: 10px;
     }
 
     nav a {
-      color: white;
       margin: 0 15px;
       text-decoration: none;
+      color: #333;
       font-weight: bold;
     }
 
+    nav a:hover {
+      color: #007BFF;
+    }
+
     section {
-      padding: 60px 20px;
-      background: rgba(0, 0, 0, 0.6);
+      padding: 50px 20px;
+      background-color: rgba(255, 255, 255, 0.85);
     }
 
-    .projects, .reviews, .contact {
-      max-width: 1000px;
-      margin: auto;
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
     }
 
-    .project-item {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 20px;
-      margin-bottom: 20px;
+    .card {
+      background: white;
       border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
     }
 
-    .project-item h3, .review-item h3 {
-      margin-bottom: 10px;
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 10px 0;
+    }
+
+    .card p {
+      padding: 0 15px 15px;
     }
 
     .btn {
       display: inline-block;
       padding: 10px 20px;
-      margin-top: 10px;
-      background: #f39c12;
+      margin: 10px;
+      background: #007BFF;
       color: white;
-      border-radius: 5px;
       text-decoration: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #0056b3;
+    }
+
+    table {
+      width: 100%;
+      margin-top: 20px;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: center;
     }
 
     footer {
-      background: rgba(0, 0, 0, 0.8);
       text-align: center;
       padding: 20px;
-      font-size: 0.9rem;
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    @media(max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
     }
   </style>
 </head>
-
 <body>
   <header>
-    <h1>My Design Portfolio</h1>
+    <h1>Jane Doe - Product Designer</h1>
     <nav>
       <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#reviews">Reviews</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <section id="about">
-    <div class="projects">
-      <h2>About Me</h2>
-      <p>I am a passionate product designer who creates intuitive and user-friendly designs with a focus on user experience. I specialize in both digital and physical product design, aiming to bring concepts to life.</p>
-    </div>
+    <h2>About Me</h2>
+    <p>Hello! I'm Jane Doe, a passionate product designer who creates intuitive and beautiful user experiences. With a blend of creativity and usability, I bring concepts to life through design thinking and innovation.</p>
+    <a href="#portfolio" class="btn">View Portfolio</a>
   </section>
 
-  <section id="projects">
-    <div class="projects">
-      <h2>My Projects</h2>
-
-      <div class="project-item">
-        <h3>Smart Home Interface</h3>
-        <p>A responsive dashboard UI for controlling smart home devices using mobile and web platforms.</p>
-        <a class="btn" href="#">View More</a>
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="portfolio">
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?ui,design" alt="Design 1">
+        <h3>App Redesign</h3>
+        <p>Improved user flow and modern UI for a task management app.</p>
       </div>
-
-      <div class="project-item">
-        <h3>Fitness Tracker App</h3>
-        <p>Designed a sleek, user-centered interface for a wearable fitness device and mobile application.</p>
-        <a class="btn" href="#">View More</a>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?ux,product" alt="Design 2">
+        <h3>Dashboard Interface</h3>
+        <p>Created an intuitive dashboard for analytics tracking.</p>
       </div>
-
-      <div class="project-item">
-        <h3>Eco-friendly Packaging Design</h3>
-        <p>Developed sustainable packaging for a new line of organic food products.</p>
-        <a class="btn" href="#">View More</a>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?wireframe,sketch" alt="Design 3">
+        <h3>Wireframes & Mockups</h3>
+        <p>Low and high-fidelity prototypes for e-commerce platforms.</p>
       </div>
     </div>
   </section>
 
-  <section id="reviews">
-    <div class="reviews">
-      <h2>What Clients Say</h2>
-
-      <div class="review-item">
-        <h3>John Doe</h3>
-        <p>"Absolutely amazing work! Delivered everything beyond expectations. Highly recommend."</p>
-      </div>
-
-      <div class="review-item">
-        <h3>Jane Smith</h3>
-        <p>"Very professional and creative. Loved the design and communication throughout the project."</p>
-      </div>
-    </div>
+  <section id="skills">
+    <h2>Skills & Tools</h2>
+    <table>
+      <tr>
+        <th>Skill</th>
+        <th>Level</th>
+        <th>Tools Used</th>
+      </tr>
+      <tr>
+        <td>UI/UX Design</td>
+        <td>Expert</td>
+        <td>Figma, Adobe XD</td>
+      </tr>
+      <tr>
+        <td>Prototyping</td>
+        <td>Advanced</td>
+        <td>Sketch, InVision</td>
+      </tr>
+      <tr>
+        <td>Frontend Dev</td>
+        <td>Intermediate</td>
+        <td>HTML, CSS, JavaScript</td>
+      </tr>
+    </table>
   </section>
 
   <section id="contact">
-    <div class="contact">
-      <h2>Contact Me</h2>
-      <p>Email: designer@example.com</p>
-      <p>Phone: +1 123 456 7890</p>
-      <p>LinkedIn: <a href="#" style="color: #f39c12;">linkedin.com/in/designer</a></p>
-    </div>
+    <h2>Contact Me</h2>
+    <p>Interested in working together? Let's chat!</p>
+    <button class="btn" onclick="showEmail()">Show Email</button>
+    <p id="email" style="margin-top:10px; font-weight:bold;"></p>
   </section>
 
   <footer>
-    &copy; 2025 My Design Portfolio. All Rights Reserved.
+    <p>&copy; 2025 Jane Doe | All rights reserved.</p>
   </footer>
-</body>
 
+  <script>
+    function showEmail() {
+      document.getElementById('email').innerText = 'jane.doe@example.com';
+    }
+  </script>
+</body>
 </html>
